@@ -1,0 +1,154 @@
+@import "tailwindcss";
+
+/* Fixed Google Fonts import - the issue was with the font family names */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Handlee:wght@400&display=swap");
+
+/* Your existing variables merged with dark mode variables */
+:root {
+  /* Your original variables */
+  --background: #ffffff;
+  --foreground: #171717;
+
+  /* Extended dark mode color system */
+  --card: #ffffff;
+  --card-foreground: #171717;
+  --popover: #ffffff;
+  --popover-foreground: #171717;
+  --primary: #000080;
+  --primary-foreground: #ffffff;
+  --secondary: #f5f5f5;
+  --secondary-foreground: #171717;
+  --muted: #f5f5f5;
+  --muted-foreground: #6b7280;
+  --accent: #b39d21;
+  --accent-foreground: #ffffff;
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+  --border: #e5e7eb;
+  --input: #e5e7eb;
+  --ring: #000080;
+  --radius: 0.5rem;
+}
+
+/* Dark mode variables */
+.dark {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+  --card: #0a0a0a;
+  --card-foreground: #ededed;
+  --popover: #0a0a0a;
+  --popover-foreground: #ededed;
+  --primary: #3b82f6;
+  --primary-foreground: #0a0a0a;
+  --secondary: #1f2937;
+  --secondary-foreground: #ededed;
+  --muted: #1f2937;
+  --muted-foreground: #9ca3af;
+  --accent: #b39d21;
+  --accent-foreground: #0a0a0a;
+  --destructive: #dc2626;
+  --destructive-foreground: #ededed;
+  --border: #374151;
+  --input: #374151;
+  --ring: #3b82f6;
+}
+
+/* Tailwind v4 theme configuration */
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  /* Font families */
+  --font-inter: "Inter", sans-serif;
+  --font-handlee: "Handlee", cursive;
+
+  /* Border radius */
+  --radius: 0.5rem;
+}
+
+/* Remove the media query since we're using class-based dark mode */
+/* @media (prefers-color-scheme: dark) is replaced by .dark class */
+
+/* Base styles */
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Font utility classes */
+.font-handlee {
+  font-family: var(--font-handlee);
+}
+
+.font-inter {
+  font-family: var(--font-inter);
+}
+
+/* Custom spacing utilities for your specific needs */
+.mt-18 {
+  margin-top: 4.5rem;
+}
+.mt-21 {
+  margin-top: 5.25rem;
+}
+.mt-22 {
+  margin-top: 5.5rem;
+}
+.mt-25 {
+  margin-top: 6.25rem;
+}
+.mt-29 {
+  margin-top: 7.25rem;
+}
+.mt-31 {
+  margin-top: 7.75rem;
+}
+.mt-36 {
+  margin-top: 9rem;
+}
+.h-86 {
+  height: 21.5rem;
+}
+.h-120 {
+  height: 30rem;
+}
+.w-158 {
+  width: 39.5rem;
+}
+
+/* Slider customization for dark mode */
+.dark .slick-dots li button:before {
+  color: white;
+  opacity: 0.5;
+}
+
+.dark .slick-dots li.slick-active button:before {
+  color: white;
+  opacity: 1;
+}
+
+/* Ensure smooth transitions for all theme-aware elements */
+* {
+  transition-property: background-color, border-color, color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
