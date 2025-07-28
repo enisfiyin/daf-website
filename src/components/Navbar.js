@@ -133,82 +133,88 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Menu Overlay */}
+      {/* Mobile Menu - Top Section Only */}
       {isMenuOpen && (
-        <div className="lg:hidden fixed inset-0 bg-black/50 z-30" onClick={toggleMenu}>
-          <div 
-            className="absolute top-0 right-0 w-80 h-full bg-white dark:bg-gray-900 shadow-lg transform transition-transform duration-300 ease-in-out"
-            onClick={(e) => e.stopPropagation()}
-          >
-            {/* Mobile Menu Header */}
-            <div className="flex justify-between items-center px-6 py-4 border-b border-gray-200 dark:border-gray-700">
-              <span className="text-lg font-semibold text-gray-800 dark:text-white">Menu</span>
+        <div className="lg:hidden fixed top-0 left-0 right-0 bg-white dark:bg-gray-900 shadow-lg z-30">
+          {/* Mobile Menu Header */}
+          <div className="flex justify-between items-center px-4 py-4 border-b border-gray-200 dark:border-gray-700">
+            <div className="flex items-center">
+              <Image
+                src="/images/daf-logo.png"
+                alt="Foundation Logo"
+                width={100}
+                height={32}
+                className="h-8 w-auto"
+              />
+            </div>
+            <div className="flex items-center space-x-3">
+              <ThemeToggle />
               <button
                 onClick={toggleMenu}
-                className="text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-white"
+                className="text-gray-600 dark:text-gray-300 p-2"
+                aria-label="Close menu"
               >
                 <X className="w-6 h-6" />
               </button>
             </div>
-
-            {/* Mobile Menu Items */}
-            <div className="px-6 py-4 space-y-4">
-              {navItems.map((item, index) => (
-                <div key={index}>
-                  {item.hasDropdown ? (
-                    <div>
-                      <button
-                        onClick={toggleDropdown}
-                        className={`flex items-center justify-between w-full text-left py-3 text-base font-medium transition-colors ${
-                          item.active
-                            ? "text-blue-600 dark:text-blue-400"
-                            : "text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400"
-                        }`}
-                      >
-                        <span>{item.name}</span>
-                        <ChevronDown className={`w-4 h-4 transition-transform ${isDropdownOpen ? 'rotate-180' : ''}`} />
-                      </button>
-                      {isDropdownOpen && (
-                        <div className="ml-4 mt-2 space-y-2">
-                          {item.dropdownItems.map((dropItem, dropIndex) => (
-                            <a
-                              key={dropIndex}
-                              href={dropItem.href}
-                              className="block py-2 text-sm text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-                              onClick={toggleMenu}
-                            >
-                              {dropItem.name}
-                            </a>
-                          ))}
-                        </div>
-                      )}
-                    </div>
-                  ) : (
-                    <a
-                      href={item.href}
-                      className={`block py-3 text-base font-medium transition-colors ${
+          </div>
+          {/* Mobile Menu Items */}
+          <div className="px-4 py-4 space-y-1">
+            {navItems.map((item, index) => (
+              <div key={index} className="border-b border-gray-100 dark:border-gray-800 last:border-b-0">
+                {item.hasDropdown ? (
+                  <div>
+                    <button
+                      onClick={toggleDropdown}
+                      className={`flex items-center justify-between w-full text-left py-4 px-4 text-base font-medium transition-colors rounded-lg ${
                         item.active
-                          ? "text-blue-600 dark:text-blue-400"
-                          : "text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400"
+                          ? "bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400"
+                          : "text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800"
                       }`}
-                      onClick={toggleMenu}
                     >
-                      {item.name}
-                    </a>
-                  )}
-                </div>
-              ))}
-            </div>
+                      <span>{item.name}</span>
+                      <ChevronDown className={`w-4 h-4 transition-transform ${isDropdownOpen ? 'rotate-180' : ''}`} />
+                    </button>
+                    {isDropdownOpen && (
+                      <div className="ml-4 pb-2 space-y-1">
+                        {item.dropdownItems.map((dropItem, dropIndex) => (
+                          <a
+                            key={dropIndex}
+                            href={dropItem.href}
+                            className="block py-2 px-4 text-sm text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800 rounded transition-colors"
+                            onClick={toggleMenu}
+                          >
+                            {dropItem.name}
+                          </a>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                ) : (
+                  <a
+                    href={item.href}
+                    className={`block py-4 px-4 text-base font-medium transition-colors rounded-lg ${
+                      item.active
+                        ? "bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400"
+                        : "text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800"
+                    }`}
+                    onClick={toggleMenu}
+                  >
+                    {item.name}
+                  </a>
+                )}
+              </div>
+            ))}
+          </div>
 
-            {/* Mobile Support Button */}
-            <div className="px-6 py-4 border-t border-gray-200 dark:border-gray-700">
-              <button 
-                className="w-full bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
-                onClick={toggleMenu}
-              >
-                Support
-              </button>
-            </div>
+          {/* Mobile Support Button */}
+          <div className="px-4 py-4 border-t border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800">
+            <button 
+              className="w-full bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
+              onClick={toggleMenu}
+            >
+              Support
+            </button>
           </div>
         </div>
       )}
