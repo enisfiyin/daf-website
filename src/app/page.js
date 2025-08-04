@@ -193,7 +193,7 @@ export default function Home() {
 
         {/* Who Are We Section */}
         <div className="flex justify-center items-center mt-12 sm:mt-16 md:mt-20">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl text-primary font-semibold">WHO ARE WE?</h2>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl  text-header font-semibold">WHO ARE WE?</h2>
         </div>
         <div className="mt-8 sm:mt-12 md:mt-16">
           <div className="flex flex-col lg:flex-row gap-6 lg:gap-12">
@@ -207,7 +207,7 @@ export default function Home() {
               <div className={`absolute inset-0 rounded-lg ${theme === "dark" ? "bg-black/40" : "bg-black/20"}`}></div>
             </div>
             <div className="relative w-full lg:w-1/2">
-              <div className="flex items-start">
+              <div className="flex items-start"> 
                 <div className="w-3 h-12 sm:h-16 rounded-sm bg-accent mr-4"></div>
                 <h2 className="font-handlee text-xl sm:text-2xl md:text-3xl max-w-full sm:max-w-md lg:max-w-lg text-foreground">
                   Raising leaders. Transforming lives. Impacting generations.
@@ -247,7 +247,7 @@ export default function Home() {
                 Since inception, we have empowered over 1,500 young leaders, disbursed over ₦10 million in scholarships,
                 and collaborated with partners like MTN Nigeria, Ogun State Government, Techpoint, and The Coven Works
                 to scale our impact. We are not just continuing a mission, we are building a movement that reflects
-                Pastor Dare Adeboye's unwavering belief in the potential of young Africans to drive lasting change.
+                Pastor Dare Adeboye&apos;s unwavering belief in the potential of young Africans to drive lasting change.
               </p>
               <button className="mt-6 bg-accent hover:bg-accent/90 w-48 sm:w-56 h-12 sm:h-14 rounded-lg shadow-md font-bold text-accent-foreground transition-colors">
                 LEARN MORE
@@ -275,7 +275,7 @@ export default function Home() {
               barriers, enabling students to continue their education and pursue their dreams. Your support can make a
               crucial difference in their lives.
             </p>
-            <button className="bg-primary hover:bg-primary/90 w-40 sm:w-48 h-12 sm:h-14 rounded-lg shadow-md font-bold text-primary-foreground mt-6 sm:mt-8 transition-colors">
+            <button className="bg-primary hover:bg-primary/90 w-40 sm:w-48 h-12 sm:h-14 rounded-lg shadow-md font-bold text-white mt-6 sm:mt-8 transition-colors">
               LEARN MORE
             </button>
           </div>
@@ -284,7 +284,7 @@ export default function Home() {
         {/* What We Do Section */}
         <div className="mt-12 sm:mt-16 md:mt-20">
           <div className="flex justify-center">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl text-primary font-semibold">WHAT WE DO</h2>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl text-header font-semibold">WHAT WE DO</h2>
           </div>
           <div className="flex flex-col lg:flex-row gap-6 lg:gap-12 mt-8 sm:mt-12 md:mt-16">
             <div className="w-full lg:w-1/2">
@@ -336,7 +336,7 @@ export default function Home() {
           className={`object-cover rounded-2xl ${theme === "dark" ? "opacity-10" : "opacity-5"}`}
         />
         <div className="absolute mt-8 w-full justify-center items-center flex">
-          <h2 className="text-5xl text-primary font-semibold">Gallery</h2>
+          <h2 className="text-5xl text-header font-semibold">Gallery</h2>
         </div>
         <div className="absolute w-full justify-center items-center flex mt-4">
           <div className="md:flex">
@@ -497,7 +497,7 @@ export default function Home() {
             Our impact is captured in these powerful moments, each photo reflects lives touched, communities empowered,
             and a legacy of service that continues to inspire the next generation of African leaders.
           </p>
-          <button className="bg-primary hover:bg-primary/90 w-48 sm:w-64 h-12 sm:h-14 rounded-lg shadow-md font-bold text-primary-foreground mt-6 sm:mt-8 transition-colors">
+          <button className="bg-primary hover:bg-primary/90 w-48 sm:w-64 h-12 sm:h-14 rounded-lg shadow-md font-bold text-white mt-6 sm:mt-8 transition-colors">
             SEE MORE PICTURES
           </button>
         </div>
@@ -506,11 +506,11 @@ export default function Home() {
       {/* Testimonials Section */}
       <div className="px-4 sm:px-6 md:px-8 lg:px-16 xl:px-20">
         <div className="flex flex-col sm:justify-center sm:items-center mt-12 sm:mt-16">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl text-primary font-semibold">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl text-header font-semibold">
             What People Are Saying About Us
           </h2>
           <p className="text-base sm:text-lg md:text-xl mt-4 sm:mt-6 max-w-full sm:max-w-md lg:max-w-2xl sm:text-center text-muted-foreground">
-            From students to parents, educators to volunteers, the voices of those we&quot;ve impacted speak volumes.
+            From students to parents, educators to volunteers, the voices of those we&apos;ve impacted speak volumes.
             Their stories reflect the real change and hope the Dare Adeboye Foundation brings to communities every day.
           </p>
         </div>
@@ -528,10 +528,10 @@ export default function Home() {
                     />
                   </div>
                   <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-card-foreground">
-                    &quot;{testimonial.title}&quot;
+                    &ldquo;{testimonial.title}&ldquo;
                   </h3>
                   <p className="text-sm sm:text-base md:text-lg text-muted-foreground italic mt-2">
-                    &quot;{testimonial.quote}&quot;
+                    &ldquo;{testimonial.quote}&rdquo;
                   </p>
                   <p className="text-base sm:text-lg mt-3 font-semibold text-card-foreground">{testimonial.author}</p>
                   <p className="text-sm sm:text-base text-muted-foreground">{testimonial.role}</p>
@@ -540,7 +540,7 @@ export default function Home() {
             ))}
           </Slider>
           <div className="flex justify-center">
-            <button className="bg-primary hover:bg-primary/90 mt-8 sm:mt-12 w-48 sm:w-64 h-12 sm:h-14 rounded-lg shadow-md font-bold text-primary-foreground transition-colors">
+            <button className="bg-primary hover:bg-primary/90 mt-8 sm:mt-12 w-48 sm:w-64 h-12 sm:h-14 rounded-lg shadow-md font-bold text-white transition-colors">
               VIEW MORE TESTIMONIALS
             </button>
           </div>
@@ -550,7 +550,7 @@ export default function Home() {
       {/* Projects Section */}
       <div className="mt-16 sm:mt-20 px-4 sm:px-6 md:px-8 lg:px-16 xl:px-20">
         <div className="flex flex-col sm:justify-center sm:items-center">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl text-primary font-semibold">Our Upcoming Projects</h2>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl text-header font-semibold">Our Upcoming Projects</h2>
           <p className="text-base sm:text-lg md:text-xl mt-4 sm:mt-6 max-w-full sm:max-w-md lg:max-w-2xl sm:text-center text-muted-foreground">
             We&apos;re gearing up for even greater impact, from exciting new scholarship opportunities to transformative
             youth empowerment programs. Our upcoming projects are purposefully designed to reach farther, uplift more
@@ -630,7 +630,7 @@ export default function Home() {
                 <input
                   type="checkbox"
                   id="terms"
-                  className="h-5 mt-1 w-5 text-white appearance-none bg-white checked:bg-accent focus:ring-accent border-gray-300 rounded relative checked:after:content-['✔'] checked:after:absolute checked:after:text-white checked:after:-top-0.5 checked:after:left-1"
+                  className="h-5 mt-1 w-5 text-white appearance-none bg-white checked:bg-accent focus:ring-accent border-gray-300 rounded relative checked:after:content-['\2714'] checked:after:absolute checked:after:text-white checked:after:-top-0.5 checked:after:left-1"
                 />
               </div>
               <div>

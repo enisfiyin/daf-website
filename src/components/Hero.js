@@ -38,7 +38,7 @@ export default function Hero() {
         </p>
         <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 md:space-x-6 mt-4 sm:mt-6 md:mt-8">
           <button className="flex items-center justify-center w-49 sm:w-48 md:w-56 h-12 sm:h-14 text-primary-foreground font-semibold bg-primary border-3 border-white rounded-lg hover:bg-primary/90 transition-colors">
-            <span>Watch the video</span>
+            <span className="text-white">Watch the video</span>
             {/* <Play className="ml-2" size={20} fill="#FFFFFF" /> */}
           </button>
           <button className="flex items-center justify-center w-41 sm:w-36 md:w-40 h-12 sm:h-14 text-primary font-semibold bg-white rounded-lg hover:bg-gray-100 transition-colors">

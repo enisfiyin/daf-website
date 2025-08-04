@@ -1,6 +1,6 @@
 import { Inter, Handlee } from 'next/font/google'
-import "./globals.css"
-import { ThemeProvider } from "@/components/theme-provider"
+import { ThemeProvider } from "../components/theme-provider"
+import "./globals.css";
 
 
 // Initialize the fonts
@@ -16,9 +16,6 @@ const handlee = Handlee({
   display: 'swap',
   variable: '--font-handlee',
 })
-
-import "./globals.css";
-
 
 export const metadata = {
   title: "Dare Adeboye Foundation",
