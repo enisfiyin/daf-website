@@ -26,9 +26,9 @@ export default function Contact() {
 
           {/* Right: Contact Form */}
           <div className="bg-[var(--card)] p-6 md:p-8 lg:p-10 rounded-lg shadow-lg">
-            <h2 className="text-2xl md:text-3xl font-bold mb-2 text-[var(--card-foreground)]">Let's Get In Touch</h2>
+            <h2 className="text-2xl md:text-3xl font-bold mb-2 text-[var(--card-foreground)]">Let&apos;s Get In Touch</h2>
             <p className="text-[var(--muted-foreground)] mb-6 text-sm">
-              When you donate, you're supporting youth empowerment, students orientations and kingdom expansion.
+              When you donate, you&apos;re supporting youth empowerment, students orientations and kingdom expansion.
             </p>
             <form className="grid gap-4">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -116,7 +116,7 @@ export default function Contact() {
           <span className="inline-block bg-[var(--secondary)] text-[var(--secondary-foreground)] px-3 py-1 rounded-full text-sm font-medium mb-4">
             Reach Out To Us
           </span>
-          <h2 className="text-2xl md:text-3xl font-bold mb-2 text-[var(--card-foreground)]">We'd Love to Hear From You</h2>
+          <h2 className="text-2xl md:text-3xl font-bold mb-2 text-[var(--card-foreground)]">We&apos;d Love to Hear From You</h2>
           <p className="text-[var(--muted-foreground)] text-sm">Have any questions to ask? use this reach out to us options</p>
         </div>
 

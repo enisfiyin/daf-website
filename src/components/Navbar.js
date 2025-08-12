@@ -22,7 +22,6 @@ export default function Navbar() {
   const navItems = [
     { name: "HOME", href: "/"},
     { name: "ABOUT", href: "/about" },
-    { name: "CONTACT", href: "/contact" },
     { name: "PRESS RELEASE", href: "#" },
     { 
       name: "WHAT WE DO", 
@@ -34,7 +33,8 @@ export default function Navbar() {
         { name: "Environment", href: "#" },
         { name: "Community Development", href: "#" }
       ]
-    }
+    },
+    { name: "CONTACT", href: "/contact" }
   ]
 
   return (
